@@ -1,0 +1,169 @@
+{% extends "base.tmpl" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <div class="columns">
+        <div class="column">
+            <h2 class="title">Featured Bots</h2>
+        </div>
+        <div class="column">
+            <a class="button is-pulled-right is-warning" href="#" style="background-color: #7289DA; color: white;">
+                See All Featured Bots
+            </a>
+        </div>
+    </div>
+    <div class="columns">
+        {% for _ in "xxxxx" %}
+            <div class="column">
+                <div class="card is-fullwidth">
+                    <a href="/bots/123456789" class="hover-shadow">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-64x64">
+                                        <img src="https://cdn.discordapp.com/app-icons/170242612425392128/8744452b039eaec1ba34c0a96c3bf428.jpg" alt="Image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">RH1-N0</p>
+                                    <p class="subtitle is-5">Moderation</p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus nec iaculis mauris.
+                            </div>
+                        </div>
+                    </a>
+                    <footer class="card-footer">
+                        <p class="card-footer-item" style="color: gold;">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <span style="margin-left: 5px; color: #4a4a4a;">
+                                (84)
+                            </span>
+                        </p>
+                        <a class="card-footer-item" style="color: #7289DA;" href="#">
+                            <span>
+                                Add To
+                            </span>
+                            <img class="image is-24x24" style="margin-left: 5px;" src="/static/img/discord_logo_color.svg">
+                        </a>
+                    </footer>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <br />
+    <div class="columns">
+        <div class="column">
+            <h2 class="title">Top Rated Bots</h2>
+        </div>
+        <div class="column">
+            <a class="button is-pulled-right is-warning" href="#" style="background-color: #7289DA; color: white;">
+                See All Top Rated Bots
+            </a>
+        </div>
+    </div>
+    {% for _ in "xx" %}
+        <div class="columns">
+            {% for _ in "xxxxx" %}
+                <div class="column">
+                    <div class="card is-fullwidth">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-64x64">
+                                        <img src="https://cdn.discordapp.com/app-icons/228378430687805442/6b979d1a28b48dd57b4570b988459de3.jpg" alt="Image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">Taggy The Tag Bot</p>
+                                    <p class="subtitle is-5">Utilities</p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                A bot that does one thing, tags.
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <p class="card-footer-item" style="color: gold;">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <span style="margin-left: 5px; color: #4a4a4a;">
+                                    (84)
+                                </span>
+                            </p>
+                            <a class="card-footer-item" style="color: #7289DA;" href="#">
+                                <span>
+                                    Add To
+                                </span>
+                                <img class="image is-24x24" style="margin-left: 5px;" src="/static/img/discord_logo_color.svg">
+                            </a>
+                        </footer>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+    <br />
+    <div class="columns">
+        <div class="column">
+            <h2 class="title">Recently Added Bots</h2>
+        </div>
+        <div class="column">
+            <a class="button is-pulled-right is-warning" href="#" style="background-color: #7289DA; color: white;">
+                See All Recently Added Bots
+            </a>
+        </div>
+    </div>
+    {% for _ in "xx" %}
+        <div class="columns">
+            {% for _ in "xxxxx" %}
+                <div class="column">
+                    <div class="card is-fullwidth">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-64x64">
+                                        <img src="https://cdn.discordapp.com/app-icons/192332191240421377/ebaf60d08dfeb3239bc33d2b888eabea.jpg" alt="Image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">Vonodosh Bot</p>
+                                    <p class="subtitle is-5">Games</p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Vonodosh. A bot that can fulfill your entertaining needs, with games to keep your guild busy.
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <p class="card-footer-item" style="color: gold;">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <span style="margin-left: 5px; color: #4a4a4a;">
+                                    (84)
+                                </span>
+                            </p>
+                            <a class="card-footer-item" style="color: #7289DA;" href="#">
+                                <span>
+                                    Add To
+                                </span>
+                                <img class="image is-24x24" style="margin-left: 5px;" src="/static/img/discord_logo_color.svg">
+                            </a>
+                        </footer>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+{% endblock %}

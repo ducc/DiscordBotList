@@ -1,0 +1,84 @@
+{% extends "base.tmpl" %}
+{% block title %}Vonodosh Bot{% endblock %}
+{% block content %}
+    <div class="columns">
+        <div class="column is-9">
+            <div class="box">
+                <div class="columns">
+                    <div class="column is-2">
+                        <figure class="image">
+                            <img src="https://cdn.discordapp.com/app-icons/192332191240421377/ebaf60d08dfeb3239bc33d2b888eabea.jpg" alt="Image" style="max-height: 128px; max-width: 128px;">
+                        </figure>
+                    </div>
+                    <div class="column is-8">
+                        <h1 class="title">
+                            Vonodosh Bot
+                            <span class="tag" style="background-color: #7289DA; color: white;">
+                                #114
+                            </span>
+                            <span class="tag is-info">
+                                72,553 Servers
+                            </span>
+                            <span class="tag" style="background-color: gold;">
+                                Featured
+                            </span>
+                        </h1>
+                        <p>Vonodosh. A bot that can fulfill your entertaining needs, with games to keep your guild busy.</p>
+                    </div>
+                    <div class="column is-2">
+                        <a class="button is-pulled-right" href="#">
+                            Website
+                        </a>
+                        <a class="button is-pulled-right" href="#" style="margin-top: 10px;">
+                            Server
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column is-3">
+            <div class="box">
+                <a class="button is-large is-fullwidth" href="#" style="color: white; background-color: #7289DA">
+                    <span>Add To</span>
+                    <img class="image is-32x32" style="margin-left: 5px;" src="/static/img/discord_logo_white.svg">
+                </a>
+            </div>
+            <div class="box">
+                <h2 class="title">
+                    Reviews (84)
+                </h2>
+                <p style="color: gold; font-size: 30px;">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </p>
+                <p>
+                    <a href="#" style="color: #7289DA">
+                        View the reviews
+                    </a>
+                </p>
+                <br />
+                <h2 class="title">
+                    Your review
+                </h2>
+                <p style="color: gold; font-size: 30px;">
+                    <i class="fa fa-star-o form-star"></i>
+                    <i class="fa fa-star-o form-star"></i>
+                    <i class="fa fa-star-o form-star"></i>
+                    <i class="fa fa-star-o form-star"></i>
+                    <i class="fa fa-star-o form-star"></i>
+                </p>
+                <form>
+                    <p class="control">
+                        <textarea class="textarea is-disabled" style="width: 100%; height: 200px;"></textarea>
+                    </p>
+                    <p class="control">
+                        <button class="button is-fullwidth is-disabled" type="submit">Submit review</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

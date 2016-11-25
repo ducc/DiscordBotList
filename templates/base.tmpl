@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %} - IMBots.com</title>
+    <link rel="stylesheet" href="/static/css/bulma.min.css" />
+    <link rel="stylesheet" href="/static/css/base.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    {% include "navbar.tmpl" %}
+    <section class="container">
+        {% block content %}{% endblock %}
+    </section>
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="/static/js/base.js"></script>
+</body>
+</html>
