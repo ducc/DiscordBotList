@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="columns">
-        {% for _ in "xxxxx" %}
+        {% for bot in featured_bots %}
             <div class="column">
                 <div class="card is-fullwidth">
                     <a href="/bots/123456789" class="hover-shadow">
@@ -20,17 +20,16 @@
                             <div class="media">
                                 <div class="media-left">
                                     <figure class="image is-64x64">
-                                        <img src="https://cdn.discordapp.com/app-icons/170242612425392128/8744452b039eaec1ba34c0a96c3bf428.jpg" alt="Image">
+                                        <img src="{{ bot.avatar }}" alt="{{ bot.name }}'s avatar">
                                     </figure>
                                 </div>
                                 <div class="media-content">
-                                    <p class="title is-4">RH1-N0</p>
-                                    <p class="subtitle is-5">Moderation</p>
+                                    <p class="title is-4">{{ bot.name }}</p>
+                                    <p class="subtitle is-5">{{ bot.category }}</p>
                                 </div>
                             </div>
                             <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Phasellus nec iaculis mauris.
+                                {{ bot.description }}
                             </div>
                         </div>
                     </a>
@@ -42,10 +41,10 @@
                             <i class="fa fa-star-half-o"></i>
                             <i class="fa fa-star-o"></i>
                             <span style="margin-left: 5px; color: #4a4a4a;">
-                                (84)
+                                ({{ bot.reviews }})
                             </span>
                         </p>
-                        <a class="card-footer-item" style="color: #7289DA;" href="#">
+                        <a class="card-footer-item" style="color: #7289DA;" href="{{ bot.authorize }}">
                             <span>
                                 Add To
                             </span>
@@ -67,50 +66,52 @@
             </a>
         </div>
     </div>
-    {% for _ in "xx" %}
-        <div class="columns">
-            {% for _ in "xxxxx" %}
-                <div class="column">
-                    <div class="card is-fullwidth">
+
+    <div class="columns">
+        {% for bot in top_rated_bots %}
+            <div class="column">
+                <div class="card is-fullwidth">
+                    <a href="/bots/123456789" class="hover-shadow">
                         <div class="card-content">
                             <div class="media">
                                 <div class="media-left">
                                     <figure class="image is-64x64">
-                                        <img src="https://cdn.discordapp.com/app-icons/228378430687805442/6b979d1a28b48dd57b4570b988459de3.jpg" alt="Image">
+                                        <img src="{{ bot.avatar }}" alt="{{ bot.name }}'s avatar">
                                     </figure>
                                 </div>
                                 <div class="media-content">
-                                    <p class="title is-4">Taggy The Tag Bot</p>
-                                    <p class="subtitle is-5">Utilities</p>
+                                    <p class="title is-4">{{ bot.name }}</p>
+                                    <p class="subtitle is-5">{{ bot.category }}</p>
                                 </div>
                             </div>
                             <div class="content">
-                                A bot that does one thing, tags.
+                                {{ bot.description }}
                             </div>
                         </div>
-                        <footer class="card-footer">
-                            <p class="card-footer-item" style="color: gold;">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <span style="margin-left: 5px; color: #4a4a4a;">
-                                    (84)
-                                </span>
-                            </p>
-                            <a class="card-footer-item" style="color: #7289DA;" href="#">
-                                <span>
-                                    Add To
-                                </span>
-                                <img class="image is-24x24" style="margin-left: 5px;" src="/static/img/discord_logo_color.svg">
-                            </a>
-                        </footer>
-                    </div>
+                    </a>
+                    <footer class="card-footer">
+                        <p class="card-footer-item" style="color: gold;">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <span style="margin-left: 5px; color: #4a4a4a;">
+                                ({{ bot.reviews }})
+                            </span>
+                        </p>
+                        <a class="card-footer-item" style="color: #7289DA;" href="{{ bot.authorize }}">
+                            <span>
+                                Add To
+                            </span>
+                            <img class="image is-24x24" style="margin-left: 5px;" src="/static/img/discord_logo_color.svg">
+                        </a>
+                    </footer>
                 </div>
-            {% endfor %}
-        </div>
-    {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+
     <br />
     <div class="columns">
         <div class="column">
@@ -122,48 +123,48 @@
             </a>
         </div>
     </div>
-    {% for _ in "xx" %}
-        <div class="columns">
-            {% for _ in "xxxxx" %}
-                <div class="column">
-                    <div class="card is-fullwidth">
+    <div class="columns">
+        {% for bot in recently_added_bots %}
+            <div class="column">
+                <div class="card is-fullwidth">
+                    <a href="/bots/123456789" class="hover-shadow">
                         <div class="card-content">
                             <div class="media">
                                 <div class="media-left">
                                     <figure class="image is-64x64">
-                                        <img src="https://cdn.discordapp.com/app-icons/192332191240421377/ebaf60d08dfeb3239bc33d2b888eabea.jpg" alt="Image">
+                                        <img src="{{ bot.avatar }}" alt="{{ bot.name }}'s avatar">
                                     </figure>
                                 </div>
                                 <div class="media-content">
-                                    <p class="title is-4">Vonodosh Bot</p>
-                                    <p class="subtitle is-5">Games</p>
+                                    <p class="title is-4">{{ bot.name }}</p>
+                                    <p class="subtitle is-5">{{ bot.category }}</p>
                                 </div>
                             </div>
                             <div class="content">
-                                Vonodosh. A bot that can fulfill your entertaining needs, with games to keep your guild busy.
+                                {{ bot.description }}
                             </div>
                         </div>
-                        <footer class="card-footer">
-                            <p class="card-footer-item" style="color: gold;">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <span style="margin-left: 5px; color: #4a4a4a;">
-                                    (84)
-                                </span>
-                            </p>
-                            <a class="card-footer-item" style="color: #7289DA;" href="#">
-                                <span>
-                                    Add To
-                                </span>
-                                <img class="image is-24x24" style="margin-left: 5px;" src="/static/img/discord_logo_color.svg">
-                            </a>
-                        </footer>
-                    </div>
+                    </a>
+                    <footer class="card-footer">
+                        <p class="card-footer-item" style="color: gold;">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <span style="margin-left: 5px; color: #4a4a4a;">
+                                ({{ bot.reviews }})
+                            </span>
+                        </p>
+                        <a class="card-footer-item" style="color: #7289DA;" href="{{ bot.authorize }}">
+                            <span>
+                                Add To
+                            </span>
+                            <img class="image is-24x24" style="margin-left: 5px;" src="/static/img/discord_logo_color.svg">
+                        </a>
+                    </footer>
                 </div>
-            {% endfor %}
-        </div>
-    {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
