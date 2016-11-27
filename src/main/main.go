@@ -5,6 +5,7 @@ import (
     "gopkg.in/macaron.v1"
     "github.com/go-macaron/pongo2"
     "net/http"
+    "io/ioutil"
 )
 
 const (
@@ -26,7 +27,7 @@ func main() {
         Prefix: "static",
     }))
     m.Use(pongo2.Pongoers(pongo2.Options{
-        Directory: conf.templates.directory,
+        Directory: conf.Templates.Directory,
     }, "base:templates"))
     m.Get("/", func(ctx *macaron.Context) {
         ctx.Data["featured_bots"] = []botModel{
@@ -71,9 +72,27 @@ func main() {
         }
         ctx.Data["content"] = "<img src=\"http://i.imgur.com/lvfXcZm.png\" class=\"image\">"
         ctx.HTMLSet(200, "base", "bot")
-
     })
-    err = http.ListenAndServe(conf.http.port, m)
+    m.Get("/login", func(ctx *macaron.Context) {
+        ctx.Redirect(getOAuthAuthorizationUrl(), 302)
+    })
+    m.Get("/redirect", func(ctx *macaron.Context) {
+        code := ctx.Query("code")
+        req, err := http.NewRequest("POST", getOAuthTokenUrl(code), nil)
+        if err != nil {
+            log.Println(err)
+            return
+        }
+        client := &http.Client{}
+        resp, err := client.Do(req)
+        if err != nil {
+            log.Println(err)
+            return
+        }
+        body, _ := ioutil.ReadAll(resp.Body)
+        log.Println(string(body))
+    })
+    err = http.ListenAndServe(conf.Http.Port, m)
     if err != nil {
         log.Fatal(err)
     }

@@ -18,19 +18,19 @@ type (
 		reviews     int
 	}
 	config struct {
-		http struct {
-			port string
-		}
-		templates struct {
-			directory string
-		}
-		oauth struct {
-			client_id         string
-			client_secret     string
-			scopes            []string
-			redirect_url      string
-			authorization_url string
-			token_url         string
-		}
+		Http struct {
+			Port string `json:"port"`
+		} `json:"http"`
+		Templates struct {
+			Directory string `json:"directory"`
+		} `json:"templates"`
+		OAuth struct {
+			ClientId         string   `json:"client_id"`
+			ClientSecret     string   `json:"client_secret"`
+			Scopes           []string `json:"scopes"`
+			RedirectUrl      string   `json:"redirect_url"`
+			AuthorizationUrl string   `json:"authorization_url"`
+			TokenUrl         string   `json:"token_url"`
+		} `json:"oauth"`
 	}
 )
