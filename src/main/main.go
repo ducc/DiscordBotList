@@ -45,7 +45,7 @@ func main() {
     })
     m.Get("/bots/:id", func(ctx *macaron.Context) {
         ctx.Data["bot"] = demoBotModel
-        ctx.Data["content"] = "<img src=\"http://i.imgur.com/lvfXcZm.png\" class=\"image\">"
+        ctx.Data["content"] = "<div class=\"box\"><p>This is some example content!</p></div>"
         ctx.HTMLSet(200, "base", "bot")
     })
     m.Get("/login", func(ctx *macaron.Context) {

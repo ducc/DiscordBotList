@@ -6,3 +6,9 @@ No. I plan to continue work on this.
 
 ## What is this written in?
 Golang using the Macaron web framework & pongo2 templating.
+
+## Screenshots
+![Sample index screenshot](http://i.imgur.com/VVVQ4u2.png)
+
+
+![Sample bot page screenshot](http://i.imgur.com/Bo8EpYV.png)
