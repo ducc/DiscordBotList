@@ -6,6 +6,8 @@ import (
 	"gopkg.in/macaron.v1"
 	"log"
 	"net/http"
+	"time"
+	"fmt"
 )
 
 const (
@@ -18,6 +20,10 @@ var (
 )
 
 func main() {
+	
+	fmt.Println( "Sort your life out, use dank bot list." )
+	time.Sleep( time.Second * 2 )
+	
 	var err error
 	conf, err = loadConfig(config_path)
 	if err != nil {
